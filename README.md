@@ -27,11 +27,12 @@ The average remained overall the same and the percentages were reduced but not i
 - **How is the school summary affected?**
 For this section, we can focuse specifically in the Thomas High School row, because the rest of the DataFrame remained untouched. The original Thomas High School row looked like this:
 
-![Original_Thomas_Data](https://user-images.githubusercontent.com/95836718/150241420-c0d7dba0-5ae5-4237-ae18-6649a10e25c2.png)
+![thomas_original](https://user-images.githubusercontent.com/95836718/150277159-0ffd5bc9-b896-4183-adf3-25a22ade74fc.png)
+
 
 Once we run the school analysis when replacing all the values in the 9th graders from Thomas High School to *NaN* it will show this:
 
-![Thomas_Uncalculated](https://user-images.githubusercontent.com/95836718/150241615-2ab90748-9936-4269-a8f8-ecc5df94ae07.png)
+![Uncalculated Thomas Data](https://user-images.githubusercontent.com/95836718/150277197-de99cda4-69ec-4bf9-ac4e-b79671f2f379.png)
 
 There is something wrong with this metrics. If we follow the story this data is telling us, Thomas High School is underperforming academically because a whole grade did not passed any of the two classes. This is not true, even if the school board decides to fail the whole grade this has nothing to do with their academic performance or the teaching methods of the teachers in regards to the topics. To avoid this and tell a correct story we need to substract the ammount of 9th graders from the total students of Thomas High School with the next lines of code:
 
@@ -43,7 +44,7 @@ There is something wrong with this metrics. If we follow the story this data is 
 
 Once we have this number, we can recalculate the metrics and they will look like this:
 
-![Thomas Updated](https://user-images.githubusercontent.com/95836718/150242822-12284afb-85e7-4751-87a1-d73bf447757b.png)
+![calculated_thomas_data](https://user-images.githubusercontent.com/95836718/150277231-53f58092-5c0b-43a8-8408-29e6f43e7e2b.png)
 
 - **How does it affect Thomas High School performance regarding other schools?**
 In the original analysis we can see that Thomas High School is ranked as the second best performing school in the district.
@@ -85,7 +86,7 @@ Because we calculate the percentages and data with by getting the means of each 
 
 ![spending](https://user-images.githubusercontent.com/95836718/150274674-f50fb572-fcfe-4d6d-99cf-41554ac5f1e4.png)
 
--**How does it affect the scores by school size**
+- **How does it affect the scores by school size**
 The original score were:
 
 ![size original](https://user-images.githubusercontent.com/95836718/150274799-dfc393d6-abba-4b53-bd66-6832de06e6aa.png)
@@ -98,7 +99,7 @@ It is the same case as the score by spending, there is no significant decision t
 
 ![size](https://user-images.githubusercontent.com/95836718/150274917-454218c4-8ac6-4668-8ccf-709e902cfd34.png)
 
--**How does it affect the scores by school type?**
+- **How does it affect the scores by school type?**
 The original outcomes was:
 
 ![type_original](https://user-images.githubusercontent.com/95836718/150275053-8c1f3090-0350-4bb6-82ff-cca4350f2207.png)
