@@ -45,4 +45,70 @@ Once we have this number, we can recalculate the metrics and they will look like
 
 ![Thomas Updated](https://user-images.githubusercontent.com/95836718/150242822-12284afb-85e7-4751-87a1-d73bf447757b.png)
 
-- **How does it affect Thomas High School performance regarding other schools?
+- **How does it affect Thomas High School performance regarding other schools?**
+In the original analysis we can see that Thomas High School is ranked as the second best performing school in the district.
+
+![top5_original](https://user-images.githubusercontent.com/95836718/150273171-a5739e51-0bbe-41dc-b53c-8ddaeee51b77.png)
+
+Analysing and reviewing the Thomas High School data without recalculating, it is easy to see how its performance will be damage. It would not be as bad to be in the bottom 5, but it certainly would not be on the top 5 performing schools. With the correction data we can see that there is no significat difference to the analysis.
+
+![top5](https://user-images.githubusercontent.com/95836718/150273409-a506f6b1-0d07-4861-a7a5-ced6cbe911a0.png)
+
+- **How does it affect the Math and Reading scores by grade.**
+For the original performance by grade we got the next result:
+**Math Score**
+
+![mathscores_grade_original](https://user-images.githubusercontent.com/95836718/150274084-1c2d386b-5800-4415-b47c-03f2a0b7de97.png)
+
+**Reading Score**
+
+![redingscores_grade_original](https://user-images.githubusercontent.com/95836718/150274114-06f2e87a-32c4-46fc-903e-31d4e2311c4d.png)
+
+To update it, we can not add a "0" as the score for the 9th graders of Thomas High School, because that will be telling a different story than the reality. For this we are going to supplement the values with a *Nan (Not a Number)* so the outcome will be as follows:
+
+**Math Scores**
+
+![math_scores_bygrade](https://user-images.githubusercontent.com/95836718/150274395-8aec8214-2fc5-466e-82d2-303dc80d8da9.png)
+
+**Reading Scores**
+
+![readingscores_by_grade](https://user-images.githubusercontent.com/95836718/150274442-1b1acd07-70ca-42c3-b2ac-09964d24a721.png)
+
+We can see how their grades were replaced with a NaN.
+
+- **How does it affected the scores by school spending**
+The original scores were:
+
+![spending_original](https://user-images.githubusercontent.com/95836718/150274569-150cafe1-59c3-4be3-b322-e739a597ab7f.png)
+
+Because we calculate the percentages and data with by getting the means of each bin in the updated school summary dataframe, there will not be any significant difference in the outcomes. 
+
+![spending](https://user-images.githubusercontent.com/95836718/150274674-f50fb572-fcfe-4d6d-99cf-41554ac5f1e4.png)
+
+-**How does it affect the scores by school size**
+The original score were:
+
+![size original](https://user-images.githubusercontent.com/95836718/150274799-dfc393d6-abba-4b53-bd66-6832de06e6aa.png)
+
+The updated outcome was:
+
+
+
+It is the same case as the score by spending, there is no significant decision to actually make a different decision or reconcider any previous analysis.
+
+![size](https://user-images.githubusercontent.com/95836718/150274917-454218c4-8ac6-4668-8ccf-709e902cfd34.png)
+
+-**How does it affect the scores by school type?**
+The original outcomes was:
+
+![type_original](https://user-images.githubusercontent.com/95836718/150275053-8c1f3090-0350-4bb6-82ff-cca4350f2207.png)
+
+And as same as before, there will not be any major difference in the updated outcome:
+
+![size](https://user-images.githubusercontent.com/95836718/150275035-39a5e83f-f0ab-4659-8816-95a85c7790f3.png)
+
+## Summary
+
+Changing the scores of the 9th graders of Thomas High School sure made the data tell a different story than the reality. Replacing the values to NaN created a discrepancy with the ammount of grades and the ammount of students that were being used to calculate percentages of students that passed. This changes affected the *total number of students* that were being used to calculate the district metrics, and also the *total number of students in Thomas High School* to calculate its metrics. Eventhough the numbers needed to be updated to change the metrics, the actual numbers of students still needed to be shown to paint the full picture with the data. Another change was the substitution of the 9th graders scores in Thomas High School with an NaN. This change can be seen in the math and reading scores by grades. Lastly, we can see some changes in the percentages in the analysis done by population, spending per student, and size. This changes are not that important because they do not vary more than 0.5 points. 
+
+With this analysis updated, the school board can analyze and see the full picture of the district while also substitung the 9th graders score because of the situation. The dataset is ready to be analyze to then be used to determine important decisions that will help improve the quality of the schools and performance of the district.
